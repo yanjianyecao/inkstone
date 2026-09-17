@@ -1,4 +1,5 @@
 name = "inkstone"
+account_id = "7dd49b6326f49f0a13d2f672f00821fc"
 main = "src/worker/index.ts"
 compatibility_date = "2026-05-01"
 compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
@@ -25,6 +26,7 @@ run_worker_first = [
 [[d1_databases]]
 binding = "DB"
 database_name = "inkstone-db"
+database_id = "fd696f76-a27d-498a-9350-2eb9cef3c13a"
 
 [[r2_buckets]]
 binding = "FILES"
@@ -32,6 +34,7 @@ bucket_name = "inkstone-files"
 
 [[kv_namespaces]]
 binding = "OAUTH_KV"
+id = "739abaf8a9b84eaaa51518411f302bfa"
 
 [[durable_objects.bindings]]
 name = "SYNC_HUB"
@@ -48,9 +51,6 @@ storage = "sqlite"
 [exports.CredentialVault]
 type = "durable-object"
 storage = "sqlite"
-
-[ai]
-binding = "AI"
 
 [triggers]
 crons = ["0 * * * *", "15,45 * * * *"]

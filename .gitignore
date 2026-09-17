@@ -20,6 +20,10 @@ worker-configuration.d.ts
 *.key
 *.p12
 *.pfx
+secret
+secrets
+credentials
+credentials.*
 
 # Local databases and runtime data
 *.db
