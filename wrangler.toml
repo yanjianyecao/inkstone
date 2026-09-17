@@ -1,5 +1,9 @@
 name = "inkstone"
 account_id = "7dd49b6326f49f0a13d2f672f00821fc"
+workers_dev = true
+routes = [
+  { pattern = "note.azucat.blog", custom_domain = true, zone_name = "azucat.blog" },
+]
 main = "src/worker/index.ts"
 compatibility_date = "2026-05-01"
 compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
@@ -57,6 +61,7 @@ crons = ["0 * * * *", "15,45 * * * *"]
 
 [vars]
 APP_NAME = "Inkstone"
+PUBLIC_URL = "https://note.azucat.blog"
 
 [observability]
 enabled = true
